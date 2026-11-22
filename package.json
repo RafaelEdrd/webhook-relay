@@ -1,0 +1,29 @@
+{
+  "name": "webhook-relay-ra",
+  "version": "1.1.0-rc.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/server.ts",
+    "worker": "node --experimental-strip-types src/worker.ts",
+    "migrate": "node --experimental-strip-types scripts/migrate.ts",
+    "status": "node --experimental-strip-types scripts/status.ts",
+    "replay": "node --experimental-strip-types scripts/replay.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/core.test.ts tests/integration.test.ts",
+    "metrics": "node --experimental-strip-types scripts/metrics.ts",
+    "retention": "node --experimental-strip-types scripts/retention.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.7.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/pg": "^8.11.0",
+    "typescript": "~5.9.3"
+  }
+}

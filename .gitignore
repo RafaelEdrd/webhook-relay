@@ -1,0 +1,10 @@
+node_modules/
+.env
+*.log
+coverage/
+dist/
+.DS_Store
+
+# Configuration may contain credentials
+.env.*
+!.env.example
